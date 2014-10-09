@@ -14,6 +14,8 @@
 		660DF98C19E72C4D00CBB4A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660DF98B19E72C4D00CBB4A5 /* Images.xcassets */; };
 		660DF98F19E72C4D00CBB4A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660DF98D19E72C4D00CBB4A5 /* LaunchScreen.xib */; };
 		660DF99B19E72C4D00CBB4A5 /* LIonsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF99A19E72C4D00CBB4A5 /* LIonsAndTigersTests.m */; };
+		660DF9A619E72EF800CBB4A5 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF9A519E72EF800CBB4A5 /* HUDViewController.m */; };
+		660DF9A919E730C100CBB4A5 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF9A819E730C100CBB4A5 /* TopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		660DF99419E72C4D00CBB4A5 /* LIonsAndTigersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LIonsAndTigersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		660DF99919E72C4D00CBB4A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660DF99A19E72C4D00CBB4A5 /* LIonsAndTigersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIonsAndTigersTests.m; sourceTree = "<group>"; };
+		660DF9A419E72EF800CBB4A5 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		660DF9A519E72EF800CBB4A5 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		660DF9A719E730C100CBB4A5 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		660DF9A819E730C100CBB4A5 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 				660DF98519E72C4D00CBB4A5 /* ViewController.h */,
 				660DF98619E72C4D00CBB4A5 /* ViewController.m */,
 				660DF98819E72C4D00CBB4A5 /* Main.storyboard */,
+				660DF9A719E730C100CBB4A5 /* TopViewController.h */,
+				660DF9A819E730C100CBB4A5 /* TopViewController.m */,
+				660DF9A419E72EF800CBB4A5 /* HUDViewController.h */,
+				660DF9A519E72EF800CBB4A5 /* HUDViewController.m */,
 				660DF98B19E72C4D00CBB4A5 /* Images.xcassets */,
 				660DF98D19E72C4D00CBB4A5 /* LaunchScreen.xib */,
 				660DF97E19E72C4D00CBB4A5 /* Supporting Files */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660DF9A919E730C100CBB4A5 /* TopViewController.m in Sources */,
 				660DF98719E72C4D00CBB4A5 /* ViewController.m in Sources */,
 				660DF98419E72C4D00CBB4A5 /* AppDelegate.m in Sources */,
+				660DF9A619E72EF800CBB4A5 /* HUDViewController.m in Sources */,
 				660DF98119E72C4D00CBB4A5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +424,7 @@
 				660DF9A019E72C4D00CBB4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		660DF9A119E72C4D00CBB4A5 /* Build configuration list for PBXNativeTarget "LIonsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				660DF9A319E72C4D00CBB4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
