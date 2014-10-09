@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopViewController.h"
+#import "HUDViewController.h"
 
 @interface ViewController : UIViewController
 

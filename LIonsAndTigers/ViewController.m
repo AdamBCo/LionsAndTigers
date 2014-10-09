@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController () <TopDelegate, HUDDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftAndRightConstraints;
 
 @end
 
@@ -16,12 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)topRevealButtonPressed:(id)sender{
+    NSLog(@"Look at Wade");
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"NavigationSegue"]){
+        UINavigationController *navController = segue.destinationViewController;
+        TopViewController *topViewController = [navController.childViewControllers objectAtIndex:0];
+        topViewController.delegate = self;
+    }
+}
+
+
 
 @end
