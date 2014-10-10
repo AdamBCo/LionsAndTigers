@@ -16,6 +16,7 @@
 		660DF99B19E72C4D00CBB4A5 /* LIonsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF99A19E72C4D00CBB4A5 /* LIonsAndTigersTests.m */; };
 		660DF9A619E72EF800CBB4A5 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF9A519E72EF800CBB4A5 /* HUDViewController.m */; };
 		660DF9A919E730C100CBB4A5 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF9A819E730C100CBB4A5 /* TopViewController.m */; };
+		660DF9AC19E75F6300CBB4A5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 660DF9AB19E75F6300CBB4A5 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		660DF9A519E72EF800CBB4A5 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 		660DF9A719E730C100CBB4A5 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
 		660DF9A819E730C100CBB4A5 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		660DF9AA19E75F6300CBB4A5 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		660DF9AB19E75F6300CBB4A5 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				660DF98519E72C4D00CBB4A5 /* ViewController.h */,
 				660DF98619E72C4D00CBB4A5 /* ViewController.m */,
 				660DF98819E72C4D00CBB4A5 /* Main.storyboard */,
+				660DF9AA19E75F6300CBB4A5 /* CustomCollectionViewCell.h */,
+				660DF9AB19E75F6300CBB4A5 /* CustomCollectionViewCell.m */,
 				660DF9A719E730C100CBB4A5 /* TopViewController.h */,
 				660DF9A819E730C100CBB4A5 /* TopViewController.m */,
 				660DF9A419E72EF800CBB4A5 /* HUDViewController.h */,
@@ -232,6 +237,7 @@
 				660DF9A919E730C100CBB4A5 /* TopViewController.m in Sources */,
 				660DF98719E72C4D00CBB4A5 /* ViewController.m in Sources */,
 				660DF98419E72C4D00CBB4A5 /* AppDelegate.m in Sources */,
+				660DF9AC19E75F6300CBB4A5 /* CustomCollectionViewCell.m in Sources */,
 				660DF9A619E72EF800CBB4A5 /* HUDViewController.m in Sources */,
 				660DF98119E72C4D00CBB4A5 /* main.m in Sources */,
 			);

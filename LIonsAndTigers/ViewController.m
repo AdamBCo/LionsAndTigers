@@ -9,8 +9,11 @@
 #import "ViewController.h"
 
 
-@interface ViewController () <TopDelegate, HUDDelegate>
+@interface ViewController () <TopDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftAndRightConstraints;
+
+@property NSMutableArray *photosArray;
+@property int buttonIndex;
 
 @end
 
@@ -18,10 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 }
 
 -(void)topRevealButtonPressed:(id)sender{
+    if (self.buttonIndex == 0) {
+        self.leftAndRightConstraints.constant +=200;
+        self.buttonIndex = 1;
+    } else if (self.buttonIndex == 1){
+        self.leftAndRightConstraints.constant -=200;
+        self.buttonIndex = 0;
+    }
+    
     NSLog(@"Look at Wade");
 }
 
@@ -33,6 +43,8 @@
         topViewController.delegate = self;
     }
 }
+
+
 
 
 

@@ -10,12 +10,12 @@
 
 @protocol HUDDelegate
 
+- (IBAction)makeBearsAppear:(id)sender;
+- (IBAction)makeTigersAppear:(id)sender;
+
 @end
 
 @interface HUDViewController : UIViewController
-
-- (IBAction)lionsButtonPressed:(id)sender;
-- (IBAction)tigersButtonPressed:(id)sender;
 
 @property id<HUDDelegate> delegate;
 

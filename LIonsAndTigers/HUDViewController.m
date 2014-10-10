@@ -8,18 +8,15 @@
 
 #import "HUDViewController.h"
 
-@interface HUDViewController ()
-
-@end
-
 @implementation HUDViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
 - (IBAction)lionsButtonPressed:(id)sender {
+    [self.delegate makeBearsAppear:self];
 }
+
 - (IBAction)tigersButtonPressed:(id)sender {
+    NSLog(@"Help");
+    [self.delegate makeTigersAppear:self];
 }
 
 @end
