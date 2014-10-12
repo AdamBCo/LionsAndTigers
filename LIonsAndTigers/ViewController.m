@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "HUDViewController.h"
 
 
-@interface ViewController () <TopDelegate>
+@interface ViewController () <HUDDelegate, TopDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftAndRightConstraints;
 
 @property NSMutableArray *photosArray;
@@ -21,6 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+-(void)makeBearsAppear{
+    [self.topViewController makeBearsAppear];
+    
+}
+
+-(void)makeTigersAppear{
+    [self.topViewController makeTigersAppear];
+    
+}
+
+-(void)makeLionsAppear{
+    [self.topViewController makeLionsAppear];
 }
 
 -(void)topRevealButtonPressed:(id)sender{
@@ -35,14 +50,22 @@
     NSLog(@"Look at Wade");
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if ([segue.identifier isEqualToString:@"NavigationSegue"]){
+    if ([segue.identifier isEqualToString:@"NavigationSegue"])
+    {
         UINavigationController *navController = segue.destinationViewController;
-        TopViewController *topViewController = [navController.childViewControllers objectAtIndex:0];
-        topViewController.delegate = self;
+        self.topViewController = [navController.childViewControllers objectAtIndex:0];
+        self.topViewController.delegate = self;
+    }
+    else if ([segue.identifier isEqualToString:@"HUDSegue"])
+    {
+        HUDViewController *hudViewController = segue.destinationViewController;
+        hudViewController.delegate = self;
     }
 }
+
 
 
 

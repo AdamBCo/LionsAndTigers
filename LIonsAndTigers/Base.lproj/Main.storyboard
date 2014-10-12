@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -19,7 +19,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-d4-xE2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="ck5-bX-AcV" kind="embed" id="bvw-yp-YFz"/>
+                                    <segue destination="ck5-bX-AcV" kind="embed" identifier="HUDSegue" id="bvw-yp-YFz"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cb7-YL-lO8">
@@ -48,7 +48,6 @@
         <!--HUDViewController-->
         <scene sceneID="Slv-BM-qKm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="et6-mC-3ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="HUDViewController" automaticallyAdjustsScrollViewInsets="NO" id="ck5-bX-AcV" customClass="HUDViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tv8-Ja-vuU"/>
@@ -76,11 +75,21 @@
                                     <action selector="tigersButtonPressed:" destination="ck5-bX-AcV" eventType="touchUpInside" id="Q3Y-5G-kpZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-wA-Kmn">
+                                <rect key="frame" x="0.0" y="108" width="40" height="30"/>
+                                <state key="normal" title="Bears">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bearsButtonPressed:" destination="ck5-bX-AcV" eventType="touchUpInside" id="qAI-6r-s8v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="et6-mC-3ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2585" y="-50"/>
         </scene>

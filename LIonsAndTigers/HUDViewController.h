@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Adam Cooper. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TopViewController.h"
 
 @protocol HUDDelegate
 
-- (IBAction)makeBearsAppear:(id)sender;
-- (IBAction)makeTigersAppear:(id)sender;
+- (void)makeBearsAppear;
+- (void)makeTigersAppear;
+- (void)makeLionsAppear;
 
 @end
 

@@ -7,13 +7,13 @@
 //
 
 #import "TopViewController.h"
-#import "HUDViewController.h"
 #import "CustomCollectionViewCell.h"
 
-@interface TopViewController() < HUDDelegate, UICollectionViewDelegate, UICollectionViewDataSource >
+@interface TopViewController() <UICollectionViewDelegate, UICollectionViewDataSource >
 @property NSMutableArray *photosArray;
 @property int buttonIndex;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
+@property HUDViewController *hudViewController;
 
 @end
 
@@ -21,20 +21,15 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    HUDViewController *hudViewController = [[HUDViewController alloc]init];
-    hudViewController.delegate = self;
+    self.photosArray = [NSMutableArray array];
+    self.hudViewController = [[HUDViewController alloc] init];
     
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.photosArray = [NSMutableArray array];
     
 }
-
-
-
-
 
 - (IBAction)hamburgerButtonPressed:(id)sender {
     [self.delegate topRevealButtonPressed:self];
@@ -42,25 +37,40 @@
 }
 
 
-
-
-
--(void)makeBearsAppear:(id)sender{
+-(void)makeBearsAppear{
+    self.photosArray = [NSMutableArray array];
     [self.photosArray addObject:[UIImage imageNamed:@"bear_1"]];
     [self.photosArray addObject:[UIImage imageNamed:@"bear_2"]];
     [self.photosArray addObject:[UIImage imageNamed:@"bear_3"]];
     [self.imageCollectionView reloadData];
-    NSLog(@"%@",self.photosArray);
+    
+    [self.delegate topRevealButtonPressed:self];
 }
 
--(void)makeTigersAppear:(id)sender{
+-(void)makeTigersAppear{
     self.photosArray = [NSMutableArray array];
     [self.photosArray addObject:[UIImage imageNamed:@"tiger_1"]];
     [self.photosArray addObject:[UIImage imageNamed:@"tiger_2"]];
     [self.photosArray addObject:[UIImage imageNamed:@"tiger_3"]];
     [self.imageCollectionView reloadData];
     
+    [self.delegate topRevealButtonPressed:self];
+    
 }
+
+-(void)makeLionsAppear{
+    self.photosArray = [NSMutableArray array];
+    [self.photosArray addObject:[UIImage imageNamed:@"lion_1"]];
+    [self.photosArray addObject:[UIImage imageNamed:@"lion_2"]];
+    [self.photosArray addObject:[UIImage imageNamed:@"lion_3"]];
+    [self.imageCollectionView reloadData];
+    
+    [self.delegate topRevealButtonPressed:self];
+    
+}
+
+
+
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

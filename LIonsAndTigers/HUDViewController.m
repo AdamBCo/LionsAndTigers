@@ -11,12 +11,16 @@
 @implementation HUDViewController
 
 - (IBAction)lionsButtonPressed:(id)sender {
-    [self.delegate makeBearsAppear:self];
+    [self.delegate makeLionsAppear];
 }
 
 - (IBAction)tigersButtonPressed:(id)sender {
-    NSLog(@"Help");
-    [self.delegate makeTigersAppear:self];
+    [self.delegate makeTigersAppear];
 }
+
+- (IBAction)bearsButtonPressed:(id)sender {
+    [self.delegate makeBearsAppear];
+}
+
 
 @end

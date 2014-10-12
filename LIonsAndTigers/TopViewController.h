@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HUDViewController.h"
 
 @protocol TopDelegate
 
@@ -17,6 +18,10 @@
 @interface TopViewController : UIViewController
 
 @property id<TopDelegate> delegate;
+
+- (void)makeBearsAppear;
+- (void)makeTigersAppear;
+- (void)makeLionsAppear;
 
 @end
 
