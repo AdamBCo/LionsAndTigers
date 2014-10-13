@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -57,8 +57,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG3-bV-doE">
-                                <rect key="frame" x="0.0" y="62" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG3-bV-doE">
+                                <rect key="frame" x="16" y="87" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Ibz-89-Tes"/>
+                                    <constraint firstAttribute="height" constant="40" id="fXR-ou-Uhq"/>
+                                </constraints>
                                 <state key="normal" title="Lions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -66,8 +70,12 @@
                                     <action selector="lionsButtonPressed:" destination="ck5-bX-AcV" eventType="touchUpInside" id="Jgn-Gg-H6c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-m0-Rnx">
-                                <rect key="frame" x="0.0" y="146" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-m0-Rnx">
+                                <rect key="frame" x="16" y="183" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="aKx-oG-dY6"/>
+                                    <constraint firstAttribute="height" constant="40" id="mf3-kl-hXs"/>
+                                </constraints>
                                 <state key="normal" title="Tigers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,8 +83,12 @@
                                     <action selector="tigersButtonPressed:" destination="ck5-bX-AcV" eventType="touchUpInside" id="Q3Y-5G-kpZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-wA-Kmn">
-                                <rect key="frame" x="0.0" y="108" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-wA-Kmn">
+                                <rect key="frame" x="16" y="135" width="160" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Q6c-ex-QFg"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yfh-BU-fgM"/>
+                                </constraints>
                                 <state key="normal" title="Bears">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -84,8 +96,24 @@
                                     <action selector="bearsButtonPressed:" destination="ck5-bX-AcV" eventType="touchUpInside" id="qAI-6r-s8v"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-jQ-88s">
+                                <rect key="frame" x="16" y="20" width="160" height="62"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sGa-m0-Rnx" firstAttribute="top" secondItem="eHj-wA-Kmn" secondAttribute="bottom" constant="8" id="1jO-zz-vcG"/>
+                            <constraint firstItem="nDo-jQ-88s" firstAttribute="leading" secondItem="eG3-bV-doE" secondAttribute="leading" id="5eS-Oj-Qt3"/>
+                            <constraint firstItem="eHj-wA-Kmn" firstAttribute="top" secondItem="eG3-bV-doE" secondAttribute="bottom" constant="8" id="Lts-wI-6uX"/>
+                            <constraint firstItem="eHj-wA-Kmn" firstAttribute="leading" secondItem="uIn-fU-eVT" secondAttribute="leading" constant="16" id="R0O-eb-wec"/>
+                            <constraint firstItem="nDo-jQ-88s" firstAttribute="top" secondItem="uIn-fU-eVT" secondAttribute="top" constant="20" symbolic="YES" id="Vxc-4t-SXG"/>
+                            <constraint firstItem="eG3-bV-doE" firstAttribute="leading" secondItem="uIn-fU-eVT" secondAttribute="leading" constant="16" id="fqd-T5-BCC"/>
+                            <constraint firstItem="sGa-m0-Rnx" firstAttribute="top" secondItem="eHj-wA-Kmn" secondAttribute="bottom" constant="8" id="gcv-3y-mGT"/>
+                            <constraint firstItem="nDo-jQ-88s" firstAttribute="trailing" secondItem="eG3-bV-doE" secondAttribute="trailing" id="qHZ-ez-kdT"/>
+                            <constraint firstItem="eG3-bV-doE" firstAttribute="top" secondItem="nDo-jQ-88s" secondAttribute="bottom" constant="5" id="sSg-pD-aAJ"/>
+                            <constraint firstItem="sGa-m0-Rnx" firstAttribute="leading" secondItem="uIn-fU-eVT" secondAttribute="leading" constant="16" id="wOl-Jg-7mM"/>
+                            <constraint firstItem="eG3-bV-doE" firstAttribute="top" secondItem="Tv8-Ja-vuU" secondAttribute="bottom" constant="87" id="xpl-1c-3dV"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -107,6 +135,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-N1-9dE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.78836495539999996" green="0.18664949049999999" blue="0.090406684690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l9p-f7-xCG">
                                     <size key="itemSize" width="250" height="308"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -147,8 +176,8 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ZFW-bq-vS6">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="5Q9-QK-mB1">
+                    <navigationItem key="navigationItem" title="Lions, Tigers, and Bears" id="ZFW-bq-vS6">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu_button" id="5Q9-QK-mB1">
                             <connections>
                                 <action selector="hamburgerButtonPressed:" destination="Z3q-5c-EVP" id="0PU-nl-lTO"/>
                             </connections>
@@ -181,4 +210,8 @@
             <point key="canvasLocation" x="1907" y="657"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="800" height="310"/>
+        <image name="menu_button" width="20" height="14"/>
+    </resources>
 </document>

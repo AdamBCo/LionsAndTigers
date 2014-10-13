@@ -11,7 +11,7 @@
 
 @protocol TopDelegate
 
--(IBAction)topRevealButtonPressed:(id)sender;
+-(IBAction)topRevealButtonPressed;
 
 @end
 

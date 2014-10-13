@@ -12,7 +12,6 @@
 
 @interface ViewController () <HUDDelegate, TopDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftAndRightConstraints;
-
 @property NSMutableArray *photosArray;
 @property int buttonIndex;
 
@@ -26,33 +25,36 @@
 
 -(void)makeBearsAppear{
     [self.topViewController makeBearsAppear];
-    
 }
 
 -(void)makeTigersAppear{
     [self.topViewController makeTigersAppear];
-    
 }
 
 -(void)makeLionsAppear{
     [self.topViewController makeLionsAppear];
 }
 
--(void)topRevealButtonPressed:(id)sender{
+-(void)topRevealButtonPressed{
+    //User constraints to move the topViewController Back and Forth.
     if (self.buttonIndex == 0) {
-        self.leftAndRightConstraints.constant +=200;
+        self.leftAndRightConstraints.constant +=300;
         self.buttonIndex = 1;
     } else if (self.buttonIndex == 1){
-        self.leftAndRightConstraints.constant -=200;
+        self.leftAndRightConstraints.constant -=300;
         self.buttonIndex = 0;
     }
     
-    NSLog(@"Look at Wade");
+    //Animate the sidebar
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
+    //Perform the appropriate segue based on the Segue Identifier.
     if ([segue.identifier isEqualToString:@"NavigationSegue"])
     {
         UINavigationController *navController = segue.destinationViewController;

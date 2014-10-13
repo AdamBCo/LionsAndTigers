@@ -32,7 +32,7 @@
 }
 
 - (IBAction)hamburgerButtonPressed:(id)sender {
-    [self.delegate topRevealButtonPressed:self];
+    [self.delegate topRevealButtonPressed];
     NSLog(@"Happy Days");
 }
 
@@ -44,7 +44,7 @@
     [self.photosArray addObject:[UIImage imageNamed:@"bear_3"]];
     [self.imageCollectionView reloadData];
     
-    [self.delegate topRevealButtonPressed:self];
+    [self.delegate topRevealButtonPressed];
 }
 
 -(void)makeTigersAppear{
@@ -54,7 +54,7 @@
     [self.photosArray addObject:[UIImage imageNamed:@"tiger_3"]];
     [self.imageCollectionView reloadData];
     
-    [self.delegate topRevealButtonPressed:self];
+    [self.delegate topRevealButtonPressed];
     
 }
 
@@ -65,7 +65,7 @@
     [self.photosArray addObject:[UIImage imageNamed:@"lion_3"]];
     [self.imageCollectionView reloadData];
     
-    [self.delegate topRevealButtonPressed:self];
+    [self.delegate topRevealButtonPressed];
     
 }
 
